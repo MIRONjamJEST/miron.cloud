@@ -1,0 +1,124 @@
+/* src/components/Navbar.css */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+  
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .nav-item {
+    margin: 0 15px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+  }
+
+  
+
+  /* Menu na urządzeniach mobilnych (<=768px) */
+@media (max-width: 768px) {
+    .nav-list {
+      display: none; /* Ukryj listę na małych ekranach */
+      flex-direction: column; /* Ułóż linki pionowo */
+      align-items: center;
+      position: absolute;
+      top: 60px; /* Ustaw menu pod navbar */
+      left: 0;
+      width: 100%;
+      background-color: #2575fc;
+    }
+  
+    .nav-item {
+      margin: 15px 0; /* Odstęp między linkami */
+    }
+  
+    .navbar.active .nav-list {
+      display: flex; /* Pokazujemy menu po kliknięciu na hamburgera */
+    }
+    /* src/components/Navbar.css */
+
+/* Styl dla ikon w menu */
+.nav-icon {
+    margin-right: 8px; /* Dodanie odstępu między ikoną a tekstem */
+    font-size: 20px; /* Ustawienie rozmiaru ikon */
+    vertical-align: middle; /* Wyrównanie ikony z tekstem */
+  }
+  
+  /* Pozostała stylizacja jak wcześniej */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 20px;
+    z-index: 1000;
+  }
+  
+  .nav-list {
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .nav-item {
+    margin: 0 15px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #2575fc;
+  }
+  
+  
+    /* Hamburger icon */
+    .hamburger {
+      display: block;
+      cursor: pointer;
+      font-size: 30px;
+      color: #fff;
+    }
+  
+    .hamburger.open {
+      color: #6a11cb; /* Zmiana koloru hamburgera po kliknięciu */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .nav-link {
+      font-size: 16px; /* Mniejszy rozmiar czcionki na bardzo małych ekranach */
+    }
+  }
+  

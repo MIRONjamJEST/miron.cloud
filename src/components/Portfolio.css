@@ -1,0 +1,103 @@
+.portfolio-section {
+  padding: 40px 20px;
+  background-color: #4f1243;  /* ← możesz zmienić tło całej sekcji */
+  width: 50%;
+  margin-left: auto;
+  box-shadow: 0 0 20px white; /* delikatny cień */
+}
+
+.portfolio-grid {
+  width: 90%;                  /* połowa szerokości ekranu */
+  margin-right: auto;            /* ← PRZESUWA CAŁOŚĆ NA PRAWĄ STRONĘ */
+  margin-right: 0;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: rgb(197, 63, 177);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item {
+  margin-bottom: 50px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #4f1243;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.project-image {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+}
+
+.project-info h3 {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: 4f1243;
+  text-decoration: none;
+  font-weight: bold;
+}
+.project-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* odstęp między h3 i linkiem */
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .portfolio-section {
+    width: 100%; /* Cała szerokość ekranu na urządzeniach mobilnych */
+    padding: 20px;
+  }
+
+  .portfolio-grid {
+    width: 100%;
+    margin-right: 0;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .portfolio-item {
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .project-image {
+    height: 200px; /* Mniejsze zdjęcia na telefonach */
+  }
+
+  .project-info h3 {
+    margin-top: 20px;
+  }
+
+  .project-link {
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-section {
+    padding: 15px;
+  }
+
+  .portfolio-grid {
+    padding: 10px;
+  }
+
+  .portfolio-item {
+    margin-bottom: 20px;
+    padding: 8px;
+  }
+
+  .project-image {
+    height: 180px; /* Jeszcze mniejsze zdjęcia na bardzo małych ekranach */
+  }
+}

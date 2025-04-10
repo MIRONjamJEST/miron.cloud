@@ -1,0 +1,72 @@
+.contact-section {
+    background-color: #4f1243;              /* ← możesz zmieniać kolor */
+    padding: 40px 20px;
+    width: 50vw;                         /* ← dokładnie połowa szerokości ekranu */
+    margin-left: 0;                     /* ← do lewej krawędzi */
+    margin-right: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: left;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 20px white; /* delikatny cień */
+  }
+  
+  
+  .contact-section h2 {
+    margin-bottom: 20px;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .contact-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #000000;
+  }
+  @media (max-width: 767px) {
+    .contact-section {
+      width: 100%;                         /* Na telefonach szerokość sekcji 90% ekranu */
+      padding: 20px 10px;                   /* Zmniejszamy padding na telefonach */
+    }
+  
+    .contact-form label {
+      margin-bottom: 10px;                  /* Mniejszy margines na małych ekranach */
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      padding: 8px;                         /* Mniejsze paddingi w polach formularza */
+      font-size: 0.9rem;                    /* Zmniejszamy font-size na telefonach */
+    }
+  
+    .contact-form button {
+      padding: 8px 15px;                    /* Mniejsze przyciski na telefonach */
+      font-size: 1rem;                      /* Zmniejszamy rozmiar czcionki na telefonie */
+    }
+  }
+  
+  

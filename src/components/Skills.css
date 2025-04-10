@@ -1,0 +1,29 @@
+.skills-section {
+    background-color: #4f1243;
+    text-align: left;
+    padding: 40px 20px;
+    max-width: 1400px;
+    width: 50%;
+    box-shadow: 0 0 20px white; /* delikatny cień */
+  }
+  .skills-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .skills-list li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 767px) {
+    .skills-section {
+      width: 100%;                 /* Na telefonach sekcja ma 90% szerokości */
+      padding: 20px 10px;         /* Zmniejszamy padding na małych ekranach */
+    }
+  
+    .skills-list li {
+      font-size: 1rem;            /* Zmniejszamy rozmiar czcionki na telefonie */
+    }
+  }
+  

@@ -1,0 +1,85 @@
+/* src/components/About.css */
+
+/* Zmiana tła sekcji */
+.about-section {
+    background-color: #4f1243; /* Jasne tło */
+    padding: 80px 20px;
+    text-align: center;
+    background-image: url('https://via.placeholder.com/1200x400'); /* Tło z obrazem */
+    background-size: 50% auto; /* Tło ma być 50% szerokości, a jego wysokość dopasowana automatycznie */
+    background-repeat: no-repeat; /* Zapobiegamy powtarzaniu tła */
+    background-position: center center; /* Ustawiamy tło na środku */
+    width: 50%;
+    box-shadow: 0 0 20px white; /* delikatny cień */
+  }
+  
+  .about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .about-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-text {
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .about-text p:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  /* Animacja fade-in dla całej sekcji */
+  .about-section {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsywność */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-image img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 768px) {
+  .about-section {
+    width: 90%;
+  }
+}
+
+  

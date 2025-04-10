@@ -1,0 +1,108 @@
+/* src/components/Header.css */
+
+body {
+    font-family: 'Roboto', sans-serif; /* Używamy czcionki Roboto */
+  }
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    background-image: url('../assets/images/hero-background.png');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: rgb(255, 255, 255);
+    animation: fadeIn 2s ease-out;
+    padding-left: 50px;
+  }
+  
+  /* Kontener dla treści */
+  .hero-content {
+    z-index: 1;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  /* Typing effect - animacja pisania tekstu */
+  .typing-effect {
+    font-size: 1.5rem;
+    display: inline-block;
+    overflow: hidden; /* Ukrywa tekst, który nie został jeszcze "napisany" */
+    border-right: 3px solid rgb(166, 29, 171); /* Kursor, który "pisze" tekst */
+    white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+    width: 0; /* Na początku tekst jest ukryty */
+    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite; /* Animacja pisania i migania kursora */
+  }
+  
+  /* Animacja - pisanie tekstu */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Animacja - miganie kursora */
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  /* Animacja FadeIn */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+  .typing-effect {
+    font-size: 1.1rem;
+    display: inline-block;
+    overflow: hidden; /* Ukrywa tekst, który nie został jeszcze "napisany" */
+    border-right: 3px solid rgb(166, 29, 171); /* Kursor, który "pisze" tekst */
+    white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+    width: 0; /* Na początku tekst jest ukryty */
+    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite; /* Animacja pisania i migania kursora */
+  }
+}
+
+/* Zmiany dla urządzeń mobilnych */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* Na urządzeniach mobilnych wyłączamy efekt fixed */
+    background-size: auto 100%; /* Zachowujemy proporcje obrazu, ale skalujemy go na wysokość */
+    background-position: center top; /* Ustawiamy tło na górze, aby obraz był widoczny */
+  }
+}
+
+/* Dla najmniejszych ekranów (np. telefony w pionie) */
+@media (max-width: 480px) {
+  body {
+    background-size: auto 100%; /* Skalowanie tła na pełną wysokość */
+    background-position: top center; /* Wyrównanie tła na górze */
+  }
+}
+
+
+    
+  
+  
+  

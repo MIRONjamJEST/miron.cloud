@@ -1,0 +1,151 @@
+/* App.css */
+
+/* src/App.css */
+
+/* Ustawienie tła dla całej strony */
+body {
+  margin: 0;  /* Usunięcie marginesów domyślnych */
+  font-family: 'Roboto', sans-serif;  /* Możesz dostosować czcionkę */
+  background-image: url('./assets/images/background.jpg');  /* Ścieżka do obrazu tła */
+  background-size: cover;  /* Dopasowanie obrazu do całego ekranu */
+  background-position: center center;  /* Wyrównanie obrazu do środka */
+  background-attachment: fixed;  /* Obraz tła nie będzie przesuwał się podczas przewijania */
+  background-repeat: no-repeat;  /* Zapobiega powtarzaniu się obrazu */
+  height: 100%;  /* Zapewnia, że tło będzie obejmować całą wysokość */
+  overflow-x: hidden;  /* Zapobiega poziomemu przewijaniu */
+}
+
+/* Tło dla sekcji kontenera głównego */
+.content {
+  background-color: rgba(255, 255, 255, 0.8); /* Tło półprzezroczyste dla zawartości */
+  padding: 20px;
+  min-height: 100vh; /* Zapewnia, że sekcja zajmuje co najmniej całą wysokość ekranu */
+}
+
+
+h1, h2 {
+  color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+  background-color: #c157e4;
+  animation: fadeIn 2s ease-out;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Section Styles */
+section {
+  padding: 50px;
+  margin: 50px 0;
+  background-color: #b963ee;
+  border-radius: 8px;
+  animation: slideIn 1.5s ease-out;
+}
+
+section h2 {
+  font-size: 2.5rem;
+}
+
+@keyframes slideIn {
+  0% { transform: translateX(100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Portfolio Gallery */
+.portfolio-item {
+  width: 30%;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Form */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #b349c5;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #fff;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #21a1f1;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 30px;
+  }
+
+  .portfolio-item {
+    width: 45%; /* Zmiana szerokości portfolio na 2 kolumny */
+  }
+}
+
+/* Na urządzeniach o szerokości ekranu do 480px (małe ekrany, np. telefony) */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .portfolio-item {
+    width: 100%; /* Zmiana na 1 kolumnę */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 8px; /* Mniejsze wypełnienie w formularzu */
+  }
+
+  .contact-form button {
+    padding: 8px 16px;
+  }
+}
+
